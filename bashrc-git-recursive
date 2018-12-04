@@ -1,0 +1,7 @@
+function git-recursive () {
+  find . -name .git -exec dirname {} \; -execdir git $* \;
+}
+
+function git-recursive-st () {
+  git-recursive st -s --branch
+}
